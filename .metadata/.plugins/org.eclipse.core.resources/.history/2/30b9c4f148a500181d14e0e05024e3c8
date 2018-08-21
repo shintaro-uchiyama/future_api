@@ -1,0 +1,18 @@
+package xyz.ucwork.future;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@RestController
+public class FutureApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(FutureApplication.class, args);
+	}
+
+	@RequestMapping("/")
+	public String function() {
+		return "HelloWorld";
+	}
+}
