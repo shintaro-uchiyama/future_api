@@ -10,6 +10,10 @@ buildscript {
 	}
 }
 
+plugins {
+    id "org.flywaydb.flyway" version "4.2.0"
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -31,4 +35,6 @@ dependencies {
 
 	// Tomcatにwarを展開するためのライブラリ
 	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+    // Flyway動かすためのconnector
+	compile('mysql:mysql-connector-java')
 }
