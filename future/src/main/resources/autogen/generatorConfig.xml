@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="MySQLTables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressDate" value="true" />
+        </commentGenerator>
+        <jdbcConnection
+                driverClass="com.mysql.jdbc.Driver"
+                connectionURL="jdbc:mysql://localhost:3306/future"
+                userId="root"
+                password="root">
+                <property name="nullCatalogMeansCurrent" value="true" />
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="useJSR310Types" value="true"/>
+        </javaTypeResolver>
+        <javaModelGenerator
+                targetPackage="xyz.ucwork.future.domain.model"
+                targetProject="future/src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaModelGenerator>
+        <sqlMapGenerator
+                targetPackage="xyz.ucwork.future.domain.mapper"
+                targetProject="future/src/main/resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+        <javaClientGenerator
+                targetPackage="xyz.ucwork.future.domain.mapper"
+                targetProject="future/src/main/java" type="MIXEDMAPPER">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+        <table schema="future"
+               tableName="%"
+               enableInsert="true"
+               enableSelectByPrimaryKey="true"
+               enableSelectByExample="false"
+               enableUpdateByPrimaryKey="true"
+               enableUpdateByExample="false"
+               enableDeleteByPrimaryKey="true"
+               enableDeleteByExample="false"
+               enableCountByExample="false"
+               selectByExampleQueryId="false"
+               modelType="flat">
+               <property name="useActualColumnNames" value="false"/>
+        </table>
+    </context>
+</generatorConfiguration>
