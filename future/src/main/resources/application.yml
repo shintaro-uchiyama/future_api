@@ -4,3 +4,14 @@ spring:
         username: root
         password: root
         driver-class-name: com.mysql.jdbc.Driver
+graphql:
+    servlet:
+        mapping: /graphql
+        enabled: true
+        corsEnabled: true
+graphiql:
+    mapping: /graphiql
+    endpoint: /graphql
+    enabled: true
+    pageTitle: GraphiQL
+        

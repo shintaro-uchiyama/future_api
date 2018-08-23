@@ -1,4 +1,4 @@
-FROM tomcat:8.0-jre8-alpine
+FROM tomcat:8.5.32-jre8-alpine
 
 # set server defautlt setting 
 RUN apk --update add tzdata perl curl openssh openrc supervisor && \
