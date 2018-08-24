@@ -1,0 +1,18 @@
+type Query {
+    # Find by name
+    members(
+      name: String!
+    ): MembersResponse!
+}
+
+type MembersResponse {
+    members: [Member]
+    errors: [Error]
+}
+
+type Member {
+  id: String!
+  name: String!
+  createdAt: String!
+  updatedAt: String
+}

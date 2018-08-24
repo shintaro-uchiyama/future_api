@@ -1,0 +1,17 @@
+type Mutation {
+    # Regist member
+    registMember(
+      name: String!
+    ): RegistMemberResponse!
+}
+
+type RegistMemberResponse {
+    registMember: RegistMember
+    errors: [Error]
+}
+
+type RegistMember {
+  id: String!
+  name: String!
+  createdAt: String!
+}

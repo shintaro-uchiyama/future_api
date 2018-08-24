@@ -1,0 +1,10 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+# Common
+type Error {
+  code: String
+  message: String
+}
